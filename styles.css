@@ -1,0 +1,45 @@
+* General styles for the gallery */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Container for the gallery */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Maximum width of the gallery */
+}
+
+/* Individual image styles */
+.galeria img {
+    width: 200px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    margin: 10px; /* Space between images */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+/* Hover effect for images */
+.galeria img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .galeria img {
+        width: 100px; /* Smaller width for mobile */
+        height: 75px; /* Smaller height for mobile */
+    }
+}
